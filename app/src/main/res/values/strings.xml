@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quick message</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="off">Quick message is off</string>
+    <string name="on">Quick message is on</string>
+</resources>
