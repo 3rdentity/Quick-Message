@@ -29,8 +29,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void click(View v){
-        SharedPreferences spr = getSharedPreferences("settings", 1);
-        SharedPreferences.Editor edit = spr.edit();
+        SharedPreferences sp = getSharedPreferences("settings", 1);
+        SharedPreferences.Editor edit = sp.edit();
         switch (v.getId()){
             case R.id.on:
                 startService(new Intent(getApplicationContext(), ChatHeadService.class));
