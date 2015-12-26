@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
-    boolean userSet;
-    boolean now;
+    private boolean userSet;
+    private boolean now;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +37,14 @@ public class MainActivity extends ActionBarActivity {
                 Toast.makeText(getApplicationContext(), getString(R.string.on), Toast.LENGTH_LONG).show();
                 edit.putBoolean("userSet", true);
                 edit.putBoolean("now", true);
-                edit.commit();
+                edit.apply();
                 break;
             case R.id.off:
                 stopService(new Intent(getApplicationContext(), ChatHeadService.class));
                 Toast.makeText(getApplicationContext(), getString(R.string.off), Toast.LENGTH_LONG).show();
                 edit.putBoolean("userSet", false);
                 edit.putBoolean("now", false);
-                edit.commit();
+                edit.apply();
                 break;
             default:
                 break;
